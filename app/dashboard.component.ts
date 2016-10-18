@@ -5,17 +5,10 @@ import { Hero } from './hero';
 import { HeroService } from './hero.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-dashboard',
-    template: `
-        <h3>Top Heroes</h3>
-        <div class="grid grid-pad">
-        <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
-            <div class="module hero">
-            <h4>{{hero.name}}</h4>
-            </div>
-        </div>
-        </div>
-    `
+    templateUrl: 'dashboard.component.html',
+    styleUrls: ['dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
     heroes: Hero[] = [];

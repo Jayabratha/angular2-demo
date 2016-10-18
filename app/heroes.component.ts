@@ -104,5 +104,3 @@ export class HeroesComponent implements OnInit {
     this.router.navigate(['/detail', this.selectedHero.id]);
   }
 }
-  }
-}
